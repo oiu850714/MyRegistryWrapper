@@ -21,3 +21,9 @@ public:
 private:
     LONG m_errorCode;
 };
+
+DWORD RegGetDword(
+    HKEY hKey,
+    const std::wstring& subKey,
+    const std::wstring& value
+);
