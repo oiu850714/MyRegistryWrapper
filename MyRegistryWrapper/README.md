@@ -1,5 +1,5 @@
 # Registry The C++ way
 
-* Â²©ö¥Ü½d¨Ï¥Î C++ ±N Windows Registry `RegGetValueA` «Ê¸Ë
-* [°Ñ¦Ò¤å¥ó](https://docs.microsoft.com/en-US/archive/msdn-magazine/2017/may/c-use-modern-c-to-access-the-windows-registry)
-* [µ§°O](https://hackmd.io/@JiUWg46gQwKA9NgI5JILfw/rJ-X0BET8)
+* ç°¡æ˜“ç¤ºç¯„ä½¿ç”¨ C++ å°‡ Windows Registry `RegGetValueA` å°è£
+* [åƒè€ƒæ–‡ä»¶](https://docs.microsoft.com/en-US/archive/msdn-magazine/2017/may/c-use-modern-c-to-access-the-windows-registry)
+* [ç­†è¨˜](https://hackmd.io/@JiUWg46gQwKA9NgI5JILfw/rJ-X0BET8)
