@@ -33,3 +33,9 @@ ULONGLONG RegGetQword(
     const std::wstring& subKey,
     const std::wstring& value
 );
+
+std::wstring RegGetString(
+    HKEY hKey,
+    const std::wstring& subKey,
+    const std::wstring& value
+);
