@@ -24,3 +24,27 @@ DWORD RegGetDword(
     }
     return data;
 }
+
+ULONGLONG RegGetQword(
+    HKEY hKey,
+    const std::wstring& subKey,
+    const std::wstring& value
+)
+{
+    ULONGLONG data{};
+    DWORD dataSize = sizeof(data);
+    LONG retCode = ::RegGetValue(
+        hKey,
+        subKey.c_str(),
+        value.c_str(),
+        RRF_RT_REG_QWORD,
+        nullptr,
+        &data,
+        &dataSize
+    );
+    if (retCode != ERROR_SUCCESS)
+    {
+        throw RegistryError{ "Cannot read QWORD from registry.", retCode };
+    }
+    return data;
+}

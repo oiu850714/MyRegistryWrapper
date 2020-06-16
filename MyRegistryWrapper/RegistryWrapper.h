@@ -27,3 +27,9 @@ DWORD RegGetDword(
     const std::wstring& subKey,
     const std::wstring& value
 );
+
+ULONGLONG RegGetQword(
+    HKEY hKey,
+    const std::wstring& subKey,
+    const std::wstring& value
+);
