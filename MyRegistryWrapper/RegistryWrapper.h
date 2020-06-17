@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <winreg.h>
 #include <string>
+#include <vector>
 #include <stdexcept>
 
 class RegistryError : public std::runtime_error
@@ -35,6 +36,12 @@ ULONGLONG RegGetQword(
 );
 
 std::wstring RegGetString(
+    HKEY hKey,
+    const std::wstring& subKey,
+    const std::wstring& value
+);
+
+std::vector<std::wstring> RegGetMultiString(
     HKEY hKey,
     const std::wstring& subKey,
     const std::wstring& value
