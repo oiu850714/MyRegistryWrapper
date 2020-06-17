@@ -2,6 +2,7 @@
 #include "RegistryWrapper.h"
 
 #include <string>
+#include <vector>
 #include <iostream>
 
 int main()
@@ -10,6 +11,7 @@ int main()
     std::wstring testDwordValue = L"NameYourValue";
     std::wstring testQwordValue = L"NameYourValue";
     std::wstring testStringValue = L"NameYourValue";
+    std::wstring testMultiStringValue = L"NameYourValue";
 
     try
     {
@@ -21,6 +23,13 @@ int main()
 
         std::wstring stringData = RegGetString(HKEY_CURRENT_USER, testSubkey, testStringValue);
         std::wcout << testSubkey << L"\\" << testStringValue << L" string data: " << stringData << std::endl;
+
+        std::vector<std::wstring> multiStringData = RegGetMultiString(HKEY_CURRENT_USER, testSubkey, testMultiStringValue);
+        std::wcout << testSubkey << L"\\" << testMultiStringValue << L" multi string data: ";
+        for (const auto& singleString : multiStringData) {
+            std::wcout << singleString << ",";
+        }
+        std::wcout << std::endl;
     }
     catch (const RegistryError& e) {
         std::cerr << "error: " << e.ErrorCode() << std::endl;
